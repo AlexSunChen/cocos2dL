@@ -2,7 +2,7 @@
 //  ImageFadeOut.cpp
 //  Particle
 //
-//  Created by JasonWu on 12/20/14.
+//  Created by SunChen on 1/20/15.
 //
 //
 
@@ -35,11 +35,13 @@ bool ImageFadeOut::initWithImage(std::string image)
         return false;
     }
     
+    //粒子系统需要采集点的颜色；
     _image=new Image();
     _image->initWithImageFile(image);
+    //end
     
-    _displayClipping=DrawNode::create();
-    auto display=Sprite::create(image);
+    _displayClipping = DrawNode::create();
+    auto display = Sprite::create(image);
     display->setAnchorPoint(Vec2(0,0));
     
     this->setContentSize(display->getContentSize());

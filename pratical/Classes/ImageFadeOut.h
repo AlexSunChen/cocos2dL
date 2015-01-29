@@ -2,7 +2,7 @@
 //  ImageFadeOut.h
 //  Particle
 //
-//  Created by JasonWu on 12/20/14.
+//  Created by SunChen on 1/20/15.
 //
 //
 
@@ -17,8 +17,9 @@ USING_NS_CC;
 class ImageFadeOut:public Node
 {
 protected:
-    ClippingNode* _displayImage;
-    DrawNode* _displayClipping;
+    //裁剪模版过程：先设置一个模版（其实就是一个遮盖图层），然后生成裁剪节点（就是将模版放入剪切容器中ClippingNode(DrawNode)),最后将
+    ClippingNode* _displayImage; //剪切容器
+    DrawNode* _displayClipping;  //剪切模版
     
     Image* _image;
     
